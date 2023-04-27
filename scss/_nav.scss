@@ -1,0 +1,26 @@
+/* Barra de navegación */
+ul {
+    list-style-type: none;
+}
+/* general */
+a {
+    font-family: tahoma;
+    font-weight: bold;
+    font-style: italic;
+    color:  rgb(222, 222, 222);
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* LOGO */
+.divLogo h2{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navHeader{
+    background-color: $color-home-negro-gris;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 10px;
+    height: auto;
+    width: auto;
+}
