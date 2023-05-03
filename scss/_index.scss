@@ -3,6 +3,36 @@ $color-primario-violeta: #7E57C2;
 $color-secundario-violeta: #d8cced;
 $color-home-negro-gris: rgb(18, 18, 18);
 
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin img-fluid{
+    width: 100%;
+    height: auto;
+}
+
+@mixin color-font-foot {
+    font-family: integral !important;
+    color:black !important;
+    font-size: 14px !important;
+}
+
+@mixin about-parrafo {
+    font-size: 1em;
+    font-family: integral;
+    color: rgb(134, 134, 134);
+    word-spacing: 4px;
+    padding-top: 10px;
+}
+
+@mixin about-titulo {
+    font-size: 3em;
+    font-family: integralBold;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -35,11 +65,6 @@ body {
     header{grid-area: header; }
     main{grid-area: main;}
     footer{grid-area: footer;} 
-    /* header, footer{ 
-        display: flex;
-        flex-direction: row;
-    } */
-
 
     /* GRID main (section1 section2 section3) */
     .gridSection{
@@ -47,14 +72,14 @@ body {
         grid-template-areas: 
         "contRedSocial contInform divImgPrincipal";
         grid-template-columns: 10% 45% 45%;
-        grid-template-rows: 1fr;
+        grid-template-rows: 1fr ;
         row-gap: 50px;
         height: 100vh;
     }
 
     .contInform{grid-area: contInform;}
     .divImgPrincipal{grid-area: divImgPrincipal;}
-
+    .contScrol{grid-area: contScrol;}
 
     .gridSectionUno{
         display: grid;
@@ -72,24 +97,6 @@ body {
     .cardTres{grid-area: cardTres;}
     .cardCuatro{grid-area: cardCuatro;}
 
-    .gridSectionDos{
-        display: grid;
-        grid-template-areas: 
-        "img1 img2 img3 img4"
-        "img5 img6 img7 img8";
-        grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: auto auto;
-        row-gap: 50px;
-    }
-    .img1{grid-area: img1;}
-    .img2{grid-area: img2;}
-    .img3{grid-area: img3;}
-    .img4{grid-area: img4;}
-    .img5{grid-area: img5;}
-    .img6{grid-area: img6;}
-    .img7{grid-area: img7;}
-    .img8{grid-area: img8;}
-
     .gridSectionTres{
         display: grid;
         grid-template-areas: 
@@ -101,46 +108,35 @@ body {
     }
 
     .navHeader{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        display: flex !important;
+        justify-content: space-around !important;
+        align-items: center !important;
         height: 100px;
     }
     
-    
     /* barra nav (home, about, ...) */
     .navLeft {
-        display: flex;
+        display: flex !important;
     }
     
     .navLeft li{
         padding: 25px;
     }
     
-    /* ICONOS DE REDES */
-    .navRightIcon{
-        display: flex; 
-        
-    }
-    
-    .navRightIcon li{
-        padding: 25px;
-    } 
-    
-    footer{
+    .contFooter{
         text-align: center;
     }
-    footer .footPrimero{
+    .contFooter .footPrimero{
         padding: 30px;
         text-decoration: none;
     }
     
-    footer .footPrimero a{
+    .contFooter .footPrimero a{
         padding: 30px;
         margin: 10px;
     }
     
-    footer .footSegundo{
+    .contFooter .footSegundo{
         padding: 25px;
         
     }
@@ -166,88 +162,122 @@ body {
         grid-template-rows: auto auto auto auto;
         row-gap: 50px;
     }
+    /* ABOUT */
+    /* grid (section-ABOUT) */
+    .gridSectionAbout{
+        display: grid;
+        grid-template-areas: 
+        "aboutSubtit aboutSubtit"
+        "iam iamInfo"
+        "missionInfo mission"
+        "principles principlesInfo";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 50px;
+    }
+
+    .aboutSubtit{grid-area: aboutSubtit;}
+    .iam{grid-area: iam;}
+    .iamInfo{grid-area: iamInfo;}
+    .missionInfo{grid-area: missionInfo;}
+    .mission{grid-area: mission;}
+    .principles{grid-area: principles;}
+    .principlesInfo{grid-area: principlesInfo;}
     
+    /* grid section portafolio */
+    .gridSectionPort{
+        display: grid;
+        grid-template-areas:
+        "colecTitulo colecTitulo colecTitulo colecTitulo" 
+        "colec-1 colec-2 colec-3 colec-4"
+        "colec-5 colec-6 colec-7 colec-8"
+        "colec-9 colec-10 colec-11 colec-12";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .colecTitulo{grid-area: colecTitulo;}
+    .colec-1{grid-area: colec-1;}
+    .colec-2{grid-area: colec-2;}
+    .colec-3{grid-area: colec-3;}
+    .colec-4{grid-area: colec-4;}
+    .colec-5{grid-area: colec-5;}
+    .colec-6{grid-area: colec-6;}
+    .colec-7{grid-area: colec-7;}
+    .colec-8{grid-area: colec-8;}
+    .colec-9{grid-area: colec-9;}
+    .colec-10{grid-area: colec-10;}
+    .colec-11{grid-area: colec-11;}
+    .colec-12{grid-area: colec-12;}
+
 }
 
 /* tarjetas */
-.text-body {
+.textBody {
     color: rgb(134, 134, 134);
-   }
+    font-size: 0.8em;
+}
    
-.text-title {
+.textTitle {
     font-size: 1.5em;
-    font-weight: bold;
    }
 .c-centro{
     display: flex;
     justify-content: center;
 }
-.card { 
+.cardSecDos { 
     width: 80%;
     height: auto;
-    max-width: 300px;
+    max-width: 45rem;
     padding: 3rem;
-    border: 1.5px solid $color-primario-violeta;;
+    border: 3.5px solid $color-secundario-violeta;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 2rem;
-    border-radius: 15px;
+    cursor: pointer;
+    font-family: integral;
 }
 
-/* boton */
-button {
-    appearance: none;
-    background-color: transparent;
-    border: 0.125em solid #1A1A1A;
-    border-radius: 0.9375em;
-    box-sizing: border-box;
-    color: #3B3B3B;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    min-height: 3.75em;
-    min-width: 0;
-    outline: none;
-    padding: 1em 2.3em;
-    text-align: center;
-    text-decoration: none;
+.cardSecDos:hover{
+    border-color: $color-primario-violeta;
+    .icon-card, .textTitle, .textBody{
+        color: $color-primario-violeta;
+    }
 }
    
-.botonContac {
-    text-align: center;
-}
-
 .h-haveProject {
     padding: 50px;
     font-size: 30px;
     font-style: bold;
+    font-family: integralBold;
+    font-size: 30px;
 }
 
 .contButon{
-    display: flex;
-    justify-content: center;
+    @include flex-column-center;
     padding: 30px;
 }
 
 /* footer */
-footer{
+.contFooter{
     height: auto;
     width: auto;
-    background-color: #6E6C68;}
+    background-color: whitesmoke;
+    @include color-font-foot;
+}
+
+.footPrimero a{
+    @include color-font-foot;
+}
+
 
 /* (home)contenido principal texto-nombre */
 .contRedSocial{
-    display: flex;
-    flex-direction: column;
+    @include flex-column-center;
     align-items: center;
-    justify-content: center;
     background-image: url("../FotosProyecto/blob\ \(2\).svg"); 
     background-size: 400px;
     background-repeat: no-repeat;
@@ -270,69 +300,212 @@ footer{
 
 
 
-
 .contPrincipal .contInform{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-
+    @include flex-column-center;
 }
 
-// .contInform .imgVioleta{
-//     width: 100%;
-//     height: auto;
-// }
 
 .contInform h1{
     font-size: 5em;
-    h2{
-        font-size: 3em;
-        p{
-            font-size: 2em;
-        }
-    }
+    font-family: integralBold;
+}
+
+.contInform h2{
+    font-size: 2em;
+    font-family: integral;
+    color: rgb(134, 134, 134);
 }   
+
+.contInform p{
+    font-size: 1em;
+    font-family: integral;
+    color: rgb(134, 134, 134);
+}
 
 /* img-principal-der */
 .divImgPrincipal{
     display: flex;
     justify-content: center;
-    align-items: center;
- 
-    
-
+    align-items: center; 
 }
+
 .divImgPrincipal img{
-    width: auto;
-    height: auto;
+    @include img-fluid;
 } 
+
+.buttonPrinc {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0px 0px 0px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    font-family: neueRegular;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #725AC1;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #725AC1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #725AC1;
+    width: 23%;
+
+  }
+  
+  .buttonPrinc:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #725AC1;
+  }
+  
+  .buttonPrinc:active {
+    transform: scale(0.9);
+  }
 
 /* clases para reutilizar */
 .m-20{margin: 20px;}
 .p-20{padding: 20px;}
 .p-50{padding: 50px;}
-.p-150{padding: 150px;}
-.p-80-top{padding-top: 80px;}
-.p-150-bottom{padding-bottom: 150px;}
 .p-top-50{padding-top: 50px;}
 .t-c{text-align: center;}
 .ob-centro{display:flex ; justify-content: center;}
 .fs-30{font-size: 30px;}
-
-/* img secion2 */
-.wh-img{
-    width: 80%;
-    height: auto;
-}
+.p-45-bottom{padding-bottom: 45px;}
 
 .contButon{
-    display: flex;
-    justify-content: center;
+    @include flex-column-center;
+    align-items: center;
 }
 
 .hDosWorkingEveryDay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-style: bold;
-    font-size: 25px;
+    font-family: integralBold;
+    font-size: 30px;
+}
+
+// ABOUT
+
+.aboutImg img{
+    width: 100%;
+    height: auto;
+}
+
+.aboutSubtit h1{
+    @include about-titulo;
+}
+
+.principlesInfo h2{
+    @include about-titulo;
+}
+
+.missionInfo h2{
+    @include about-titulo;
+}
+
+.iamInfo h2{
+    @include about-titulo;
+}
+
+.principlesInfo p{
+    @include about-parrafo;
+}   
+
+.missionInfo p{
+    @include about-parrafo;
+}
+
+.iamInfo p{
+    @include about-parrafo;
+}
+
+/* port pagina */
+.img-colec img{
+    width: 100%;
+    height: auto;
+}
+
+.colecTitulo{
+    @include about-titulo;
+}
+
+// productos
+.card{
+    background-color: $color-home-negro-gris !important;
+    font-family: integral !important;
+    border-color: white !important;
+}
+
+.card-img{
+    width: 50%;
+}
+
+.cardColorTitulo{
+    color: rgb(222, 222, 222);
+}
+
+.cardColor{
+    color: rgb(134, 134, 134);
+}
+
+// contacto
+.btn{
+    background-color: $color-primario-violeta;
+    border-color: $color-primario-violeta;
+}
+
+.form-label{
+    font-family: integral;
+    color: rgb(134, 134, 134);
+}
+
+/* Vista MOBILE */
+@media (max-width:768px){
+    .desaparecer{
+        display: none;
+    }
+    .contInform h1{
+        font-size: 2.3em;
+        font-family: integralBold;
+        text-align: center;
+    }
+    
+    .contInform h2{
+        font-size: 1em;
+        font-family: integralBold;
+        text-align: center;
+    }
+    .contInform p{
+        font-size: 0.6em;
+        font-family: integralBold;
+        text-align: center;
+    }
+
+    .buttonPrinc{
+        width: 100%;
+    }
+
+    .cardSecDos{
+        width: 100%;
+    }
+
+    .contFooter{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        height: 45px !important;
+    }
+
+    .footSegundo h4{
+        font-size: 12px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .footPrimero a{
+        font-size: 11px !important;
+    }
 }

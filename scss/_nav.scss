@@ -4,23 +4,14 @@ ul {
 }
 /* general */
 a {
-    font-family: tahoma;
-    font-weight: bold;
-    font-style: italic;
-    color:  rgb(222, 222, 222);
+    font: 400 1.2rem Poppins, sans-serif !important;
+    color:  rgb(222, 222, 222) !important;
     text-decoration: none;
-    font-size: 17px;
-}
-
-/* LOGO */
-.divLogo h2{
-    font-size: 25px;
-    font-weight: bold;
 }
 
 .navHeader{
-    background-color: $color-home-negro-gris;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 10px;
-    height: auto;
-    width: auto;
+    background-color: $color-home-negro-gris !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 10px !important;
+    height: auto !important;
+    width: auto !important;
 }

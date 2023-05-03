@@ -8,6 +8,7 @@
     <meta name="description" content="Bienvenidos al sitio ...">
     <meta name="keywords" content="palabras claves">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- LINK CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,25 +16,28 @@
         <div class="gridHome">    
             <!-- header -->
             <header>
-                <nav class="navHeader">
-                    <!-- logo -->
-                    <div class="divLogo">
-                        <a href="#"><h2>JO<br>EL.</h2></a>
+                <nav class="navHeader navbar navbar-expand-lg">
+                    <div class="container-fluid divLogo">
+                        <a class="" href="#"><h2>JO<br>EL.</h2></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                            <!-- nav -->
+                            <ul class="navLeft">
+                                <li><a href="pages/nosotros.html">About</a></li>
+                                <li><a href="pages/portafolio.html">Portafolio</a></li>
+                                <li><a href="pages/productos.html">Products</a></li>
+                                <li><a href="pages/contacto.html">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <!-- nav -->
-                    <ul class="navLeft">
-                        <li><a href="pages/nosotros.html">About</a></li>
-                        <li><a href="pages/portafolio.html">Portafolio</a></li>
-                        <li><a href="pages/productos.html">Productos</a></li>
-                        <li><a href="pages/contacto.html">Contacto</a></li>
-                    </ul>
                 </nav>
-            </header>
             <!-- main -->
             <main>
                 <!-- section 1 -->
                 <section class="contPrincipal gridSection">
-                    <div class="contRedSocial">
+                    <div class="contRedSocial desaparecer">
                         <ul>
                             <li>
                                 <a href="#">
@@ -55,81 +59,67 @@
                         </ul>
                     </div>
                     <div class="contInform">
-                        <!-- <img class="imgVioleta" src="FotosProyecto/blob (1).svg" alt="imagen violeta"> -->
                         <h1>Hi, I'm Joel Peterson</h1>
                         <h2 class="">Content creator</h2>  
                         <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore excepturi 
                             mollitia nam quam quidem, tempora, quasi, cumque </p>
+                        <button class="buttonPrinc">Get in touch</button>    
                     </div>    
                     <div class="divImgPrincipal">
                         <img src="FotosProyecto/Social strategy-bro.svg" alt="foto principal">
                     </div>
+
                 </section>
                 <section class="gridSectionUno">
-                    <div class="hDosWorkingEveryDay">
+                    <div class="hDosWorkingEveryDay p-45-bottom">
                         <h2>Working every day with everything I like the most.</h2>
                     </div>
-                    <div class="cardUno c-end p-right-20 c-centro-m">
-                        <div class="card">
+                    <div class="cardUno c-end p-right-20 c-centro-m p-45-bottom">
+                        <div class="cardSecDos">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera icon-card" viewBox="0 0 16 16">
+                                <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
+                                <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                            </svg>
                             <p class="textTitle">Photography</p>
-                            <p class="textBody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ad!</p>
+                            <p class="textBody">My photography section features a variety of our best shots, including landscapes, portraits, and lifestyle photography.</p>
                         </div>
                     </div>
-                    <div class="cardDos c-start p-left-20 c-centro-m">
-                        <div class="card">
+                    <div class="cardDos c-start p-left-20 c-centro-m p-45-bottom">
+                        <div class="cardSecDos">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-reels icon-card" viewBox="0 0 16 16">
+                                <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+                                <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"/>
+                                <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                            </svg>
                             <p class="textTitle">Filmmaking</p>
-                            <p class="textBody">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, dolor.</p>
+                            <p class="textBody">This section of the website showcases my passion for filmmaking. I love to tell stories through the lens of a camera and capture moments that can be cherished forever.</p>
                         </div>    
                     </div>
-                    <div class="cardTres c-end p-right-20 c-centro-m">
-                        <div class="card">
+                    <div class="cardTres c-end p-right-20 c-centro-m p-45-bottom">
+                        <div class="cardSecDos">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-image-fill icon-card" viewBox="0 0 16 16">
+                                <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"/>
+                            </svg>
                             <p class="textTitle">Portafolio</p>
-                            <p class="textBody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, odio.</p>
+                            <p class="textBody">My portfolio is a collection of my best work that showcases my skills in various areas of creative work.</p>
                         </div>
                     </div>  
-                    <div class="cardCuatro c-start p-left-20 c-centro-m">
-                        <div class="card">
+                    <div class="cardCuatro c-start p-left-20 c-centro-m p-45-bottom">
+                        <div class="cardSecDos">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box icon-card" viewBox="0 0 16 16">
+                                <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+                            </svg>
                             <p class="textTitle">Products</p>
-                            <p class="textBody">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, ut.</p>
+                            <p class="textBody">My products section features a range of creative products that i have designed and developed. From merchandise to digital products, I am always exploring new ways to express my creativity.</p>
                         </div>
                     </div>
                 </section>    
-                </section>
-                <!-- section 2 -->
-                <section class="contSecDos gridSectionDos">
-                    <div class="img1 c-centro p-left-30-img">
-                        <img class="wh-img" src="FotosProyecto/piotr-osmenda-iwlOvfHV2RA-unsplash.jpg" alt="foto1">
-                    </div>
-                    <div class="img2 c-centro p-left-30-img">
-                        <img class="wh-img" src="FotosProyecto/darshan-patel-L1rVLWhdbAU-unsplash.jpg" alt="foto2">
-                    </div>
-                    <div class="img3 c-centro p-left-30-img">
-                        <img class="wh-img" src="FotosProyecto/SanFranciscoStreetHotel.jpg" alt="foto3">
-                    </div>
-                    <div class="img4 c-centro p-left-30-img">
-                        <img class="wh-img" src="FotosProyecto/robin-stief-eKqLGtQZZqI-unsplash.jpg" alt="foto4">
-                    </div>
-                    <div class="img5 c-centro p-left-30-img">
-                        <img class="wh-img" src="FotosProyecto/josh-hild-WX5bgpOevrQ-unsplash.jpg" alt="foto5">
-                    </div>
-                    <div class="img6 c-centro p-left-30-img">
-                        <img class="wh-img" src="FotosProyecto/lerone-pieters-3lKLffVFUoc-unsplash.jpg" alt="foto6">
-                    </div>
-                    <div class="img7 c-centro p-left-30-img">
-                        <img class="wh-img" src="FotosProyecto/batuhan-dogan-gRnZaO2hzy0-unsplash.jpg" alt="foto7">
-                    </div>
-                    <div class="img8 c-centro p-left-30-img">
-                        <img class="wh-img" src="FotosProyecto/pexels-céline-14771169.jpg" alt="foto8">
-                    </div>    
-                </section>
                 <section class="gridSectionTres">
                     <div class="h-haveProject t-c fs-30">
                         <h3>Have a project in mind? Let's work together.</h3>
                     </div>
                     <div class="contButon">
-                        <button>
-                            let's talk
-                        </button>
+                        <button class="buttonPrinc">Let's talk</button>
                     </div>
                 </section>
             </main>    
@@ -137,8 +127,8 @@
             <footer class="contFooter">
                 <div class="footPrimero">
                     <a href="#">About</a>
-                    <a href="#">fasigha</a>
-                    <a href="#">dkgasgoigf</a>
+                    <a href="#">Info</a>
+                    <a href="#">Affiliates</a>
                     <a href="#">Contact</a>
                     <a href="#">Youtube</a>
                     <a href="#">Instagram</a>
@@ -150,5 +140,6 @@
                 </div>
             </footer>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
