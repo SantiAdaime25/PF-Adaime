@@ -127,7 +127,7 @@ body {
         text-align: center;
     }
     .contFooter .footPrimero{
-        padding: 30px;
+        
         text-decoration: none;
     }
     
@@ -209,7 +209,6 @@ body {
     .colec-10{grid-area: colec-10;}
     .colec-11{grid-area: colec-11;}
     .colec-12{grid-area: colec-12;}
-
 }
 
 /* tarjetas */
@@ -497,7 +496,6 @@ body {
         flex-direction: column !important;
         justify-content: space-between !important;
         align-items: center !important;
-        height: 45px !important;
     }
 
     .footSegundo h4{
@@ -506,6 +504,6 @@ body {
     }
 
     .footPrimero a{
-        font-size: 11px !important;
+        font-size: 8px !important;
     }
 }

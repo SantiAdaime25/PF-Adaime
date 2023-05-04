@@ -96,7 +96,6 @@ body {
     text-align: center;
   }
   .contFooter .footPrimero {
-    padding: 30px;
     text-decoration: none;
   }
   .contFooter .footPrimero a {
@@ -536,14 +535,13 @@ body {
     flex-direction: column !important;
     justify-content: space-between !important;
     align-items: center !important;
-    height: 45px !important;
   }
   .footSegundo h4 {
     font-size: 12px !important;
     margin-bottom: 0 !important;
   }
   .footPrimero a {
-    font-size: 11px !important;
+    font-size: 8px !important;
   }
 }
 /* Barra de navegación */
